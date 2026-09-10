@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Cards</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .cards-container {
+            display: grid;
+            justify-content: center;
+            grid-template-columns: repeat(3, 300px);
+            gap: 20px;
+            background-color: #eae5ff;
+            font-family: sans-serif;
+            padding: 20px;
+
+            animation: containerAnimation 1s ease-in-out;
+        }
+
+        .movie-card {
+            width: 230px;
+            border: 1px solid;
+            border-color: #00000014;
+            background-color: #f0f0f0;
+            border-radius: 16px;
+            overflow: hidden;
+            animation: cardanimation 1s ease-in-out;
+            transition: 0.3s;
+        }
+
+        .movie-card img {
+            width: 100%;
+            height: 300px;
+            display: block;
+            object-fit: cover;
+        }
+
+        .movie-details {
+            padding: 12px;
+        }
+
+        .movie-details h2 {
+            margin: 0 0 8px;
+            font-size: 18px;
+        }
+
+        .movie-details p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        /* .movie-card:hover {
+            transform: translateY(-4px) scale(1.02);
+        } */
+
+        .movie-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .movie-card:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .movie-card:nth-child(3) {
+            animation-delay: 0.7s;
+        }
+
+        .movie-card:nth-child(4) {
+            animation-delay: 1s;
+        }
+
+        .movie-card:nth-child(5) {
+            animation-delay: 1.3s;
+        }
+
+        .movie-card:nth-child(6) {
+            animation-delay: 1.6s;
+        }
+        .booking-btn {
+            background-color: #5fc259;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+
+            position: absolute;
+            right: 20px;
+            top: 20px;
+
+            animation: bookingAnimation 1s ease-in-out 1 forwards;
+        }
+        .book-button {
+            background-color: #5fc259;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+    @keyframes bookingAnimation {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+        @keyframes containerAnimation {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes cardanimation {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="booking-btn">✔ Booking Confirmed</button>
+
+    <div class="cards-container">
+
+        <div class="movie-card">
+            <img src="https://cdn.district.in/movies-assets/images/cinema/_Poster-d0d78f60-961a-11f1-8483-eb84b060bac3.jpg" alt="Movie Poster">
+
+            <div class="movie-details">
+                <h2>Mirzapur: The Movie</h2>
+                <p>A | Hindi</p>
+
+                <div class="bbox">
+                    <button class="book-button">Book Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="movie-card">
+            <img src="https://cdn.district.in/movies-assets/images/cinema/Hanuman-Ansh-3199a900-6975-11f1-a51b-91d242246b61.jpg" alt="Movie Poster">
+
+            <div class="movie-details">
+                <h2>Hanuman Ansh</h2>
+                <p>U | Hindi</p>
+
+                <div class="bbox">
+                    <button class="book-button">Book Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="movie-card">
+            <img src="https://cdn.district.in/movies-assets/images/cinema/toxiv%3Dc-8340c900-9c6f-11f1-97d4-73a32236137e.jpg" alt="Movie Poster">
+
+            <div class="movie-details">
+                <h2>Toxic: A Fairy Tale for Grown-ups</h2>
+                <p>A | Hindi</p>
+
+                <div class="bbox">
+                    <button class="book-button">Book Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="movie-card">
+            <img src="https://cdn.district.in/movies-assets/images/cinema/_Poster-d0d78f60-961a-11f1-8483-eb84b060bac3.jpg" alt="Movie Poster">
+
+            <div class="movie-details">
+                <h2>Mirzapur: The Movie</h2>
+                <p>A | Hindi</p>
+
+                <div class="bbox">
+                    <button class="book-button">Book Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="movie-card">
+            <img src="https://cdn.district.in/movies-assets/images/cinema/Hanuman-Ansh-3199a900-6975-11f1-a51b-91d242246b61.jpg" alt="Movie Poster">
+
+            <div class="movie-details">
+                <h2>Hanuman Ansh</h2>
+                <p>U | Hindi</p>
+
+                <div class="bbox">
+                    <button class="book-button">Book Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="movie-card">
+            <img src="https://cdn.district.in/movies-assets/images/cinema/toxiv%3Dc-8340c900-9c6f-11f1-97d4-73a32236137e.jpg" alt="Movie Poster">
+
+            <div class="movie-details">
+                <h2>Toxic: A Fairy Tale for Grown-ups</h2>
+                <p>A | Hindi</p>
+
+                <div class="bbox">
+                    <button class="book-button">Book Now</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
